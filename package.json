@@ -1,0 +1,28 @@
+{
+  "name": "amalia-cardo-site",
+  "version": "0.0.1",
+  "description": "Amalia Cardo Site",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "amalia",
+    "cardo",
+    "sarta",
+    "modellista",
+    "stilista"
+  ],
+  "author": "Antonio D'Alessio",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-assemble": "^0.5.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-responsive-images": "^0.1.9",
+    "grunt-webfont": "^1.6.0"
+  }
+}
