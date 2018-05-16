@@ -60,10 +60,10 @@
 
 @font-face {
 	font-family:"icons";
-	src:url("../dist/fonts/icons.eot?46f7cfba70fccc896f974734d8666429");
+	src:url("../dist/fonts/icons.eot?217396cb3371296180d784bb6256ce03");
 	src:url("../dist/fonts/icons.eot?#iefix") format("embedded-opentype"),
-		url("../dist/fonts/icons.woff?46f7cfba70fccc896f974734d8666429") format("woff"),
-		url("../dist/fonts/icons.ttf?46f7cfba70fccc896f974734d8666429") format("truetype");
+		url("../dist/fonts/icons.woff?217396cb3371296180d784bb6256ce03") format("woff"),
+		url("../dist/fonts/icons.ttf?217396cb3371296180d784bb6256ce03") format("truetype");
 	font-weight:normal;
 	font-style:normal;
 }
@@ -89,33 +89,58 @@
 /* Icons */
 
 
-.icon_button:before {
+.icon_arrow-down:before {
 	content:"\f101";
 }
 
 
-.icon_facebook:before {
+.icon_arrow-left:before {
 	content:"\f102";
 }
 
 
-.icon_flickr:before {
+.icon_arrow-right:before {
 	content:"\f103";
 }
 
 
-.icon_instagram:before {
+.icon_arrow-up:before {
 	content:"\f104";
 }
 
 
-.icon_linkedin:before {
+.icon_button:before {
 	content:"\f105";
 }
 
 
-.icon_scissors:before {
+.icon_facebook:before {
 	content:"\f106";
+}
+
+
+.icon_flickr:before {
+	content:"\f107";
+}
+
+
+.icon_instagram:before {
+	content:"\f108";
+}
+
+
+.icon_linkedin:before {
+	content:"\f109";
+}
+
+
+.icon_menu:before {
+	content:"\f10a";
+}
+
+
+.icon_scissors:before {
+	content:"\f10b";
 }
 
 		</style>
@@ -124,6 +149,14 @@
 		<h1>icons</h1>
 
 		<div class="icons" id="icons">
+			
+				<div class="icons__item" data-name="arrow-down"><i class="icon icon_arrow-down"></i> icon_arrow-down</div>
+			
+				<div class="icons__item" data-name="arrow-left"><i class="icon icon_arrow-left"></i> icon_arrow-left</div>
+			
+				<div class="icons__item" data-name="arrow-right"><i class="icon icon_arrow-right"></i> icon_arrow-right</div>
+			
+				<div class="icons__item" data-name="arrow-up"><i class="icon icon_arrow-up"></i> icon_arrow-up</div>
 			
 				<div class="icons__item" data-name="button"><i class="icon icon_button"></i> icon_button</div>
 			
@@ -134,6 +167,8 @@
 				<div class="icons__item" data-name="instagram"><i class="icon icon_instagram"></i> icon_instagram</div>
 			
 				<div class="icons__item" data-name="linkedin"><i class="icon icon_linkedin"></i> icon_linkedin</div>
+			
+				<div class="icons__item" data-name="menu"><i class="icon icon_menu"></i> icon_menu</div>
 			
 				<div class="icons__item" data-name="scissors"><i class="icon icon_scissors"></i> icon_scissors</div>
 			

@@ -1,0 +1,19 @@
+{
+  "name": "amaliacardo",
+  "version": "0.0.1",
+  "homepage": "www.amaliacardo.it",
+  "authors": [
+    "Antonio D'Alessio <antonio@adias.it>"
+  ],
+  "description": "Nessuno per ora",
+  "main": "index.html",
+  "keywords": [
+    "amalia",
+    "cardo"
+  ],
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "magnific-popup": "~1.1.0"
+  }
+}

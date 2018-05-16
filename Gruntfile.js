@@ -1,4 +1,11 @@
 module.exports = function(grunt) {
+	var bowerDir = "bower_components/",
+		common = [
+			bowerDir + 'jquery/dist/jquery.js',
+			//bowerDir + 'jquery-mobile-bower/js/jquery.mobile-1.4.5.js',
+			'js/common.js'
+		];
+
 
 	grunt.initConfig({
 	  compass: {
@@ -22,9 +29,11 @@ module.exports = function(grunt) {
 	    },
 	    my_target: {
 	      files: {
-	        'dist/js/index.min.js': ['js/index.js'],
-	        'dist/js/about.min.js': ['js/about.js'],
-	        'dist/js/contact.min.js': ['js/contact.js'],
+	        'dist/js/index.min.js': common.concat(['js/index.js']),
+	        'dist/js/about.min.js': common.concat(['js/about.js']),
+	        'dist/js/what.min.js': common.concat(['js/what.js']),
+	        'dist/js/work.min.js': common.concat([bowerDir + 'magnific-popup/dist/jquery.magnific-popup.js','js/work.js']),
+	        'dist/js/contact.min.js': common.concat(['js/contact.js']),
 	      }
 	    }
 	  },
@@ -41,29 +50,58 @@ module.exports = function(grunt) {
 		  }
 		},
 		responsive_images: {
-	    images: {
-	      options: {
-	        sizes: [
-	        {
-	          width: 640,
-	          suffix: "_normal",
-	          quality: 79,
-	          rename: false,
-	        },
-	        {
-	          width: 1024,
-	          suffix: "_x2",
-	          quality: 60,
-	          rename: false,
-	        }]
-	      },
-	      files: [{
-	        expand: true,
-	        src: ['*.{jpg,gif,png,jpeg}'],
-	        cwd: './images',
-	        dest: './dist/images'
-	      }]
-	    }
+		    images: {
+		      options: {
+		        sizes: [
+		        {
+		          width: 640,
+		          suffix: "_normal",
+		          quality: 79,
+		          rename: false,
+		        },
+		        {
+		          width: 1024,
+		          suffix: "_x2",
+		          quality: 60,
+		          rename: false,
+		        }]
+		      },
+		      files: [{
+		        expand: true,
+		        src: ['*.{jpg,gif,png,jpeg}'],
+		        cwd: './images',
+		        dest: './dist/images'
+		      }]
+		    },
+		    works: {
+		      options: {
+		        sizes: [
+		        {
+		          width: 250,
+		          suffix: "_thumb",
+		          quality: 79,
+		          rename: false,
+		        },
+		        {
+		          width: 640,
+		          suffix: "_normal",
+		          quality: 79,
+		          rename: false,
+		        },
+		        {
+		          width: 1024,
+		          suffix: "_x2",
+		          quality: 60,
+		          rename: false,
+		        }]
+		      },
+		      files: [{
+		        expand: true,
+		        src: ['*.{jpg,gif,png,jpeg}'],
+		        cwd: './images/work',
+		        dest: './dist/images/work'
+		      }]
+		    }
 	  },
 	  webfont: {
 	    icons: {
@@ -85,7 +123,7 @@ module.exports = function(grunt) {
 		    },
 		  },
 		  js: {
-		    files: ['js/**/*.scss'],
+		    files: ['js/**/*.js'],
 		    tasks: ['uglify'],
 		    options: {
 		      spawn: false,
